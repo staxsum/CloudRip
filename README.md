@@ -1,34 +1,54 @@
 # CloudRip
 
-CloudRip is designed to bypass Cloudflare protection and help discover the real IP addresses of domains by enumerating subdomains. It can be used for ethical research, educational purposes, and penetration testing to identify the actual servers behind Cloudflare.
+A tool that helps you find the real IP addresses hiding behind Cloudflare by checking subdomains. Great for penetration testing, security research, and learning how Cloudflare protection works.
 
-## Features
-- **Multithreaded Subdomain Resolution:** Faster scanning with configurable threading.
-- **Cloudflare IP Filtering:** Automatically filters out IPs known to belong to Cloudflare.
-- **Customizable Wordlists:** Supports user-defined wordlists for subdomain enumeration.
-- **Option to Save Results:** Save found IPs to an output file for further analysis.
-- **Rate Limiting:** Adjustable rate limiting to prevent getting blocked during scans.
-- **Extended Wordlist Support:** Includes a comprehensive and categorized default wordlist (dom.txt) for better results.
+## What it does
 
-## Installation
-CloudRip requires Python 3 and the following libraries:
-- `colorama`
-- `pyfiglet`
+- **Fast subdomain scanning** - Uses multiple threads to speed things up
+- **Filters out Cloudflare IPs** - Only shows you the real server addresses
+- **Bring your own wordlist** - Or use the built-in one (dom.txt)
+- **Save your findings** - Export results to a file for later
+- **Rate limiting** - Won't spam the target and get you blocked
+- **Solid default wordlist** - Organized and comprehensive for better results
 
-### To install dependencies, run:
-```
+## Getting it running
+
+You'll need Python 3 and a couple of libraries:
+```bash
 pip install colorama pyfiglet
 ```
-## Usage
+
+## How to use it
+
+Basic usage:
+```bash
+python3 cloudrip.py example.com
 ```
-python3 cloudrip.py <domain> -w <wordlist> -t <threads> -o <output_file> <domain>: The target domain (e.g., example.com)
--w <wordlist>: Path to a custom wordlist (default is dom.txt)
--t <threads>: Number of threads to use for concurrent scanning (default is 10)
--o <output_file>: Optional. If specified, saves the results to a file
-```
-## Example
-```
+
+With all the options:
+```bash
 python3 cloudrip.py example.com -w dom.txt -t 20 -o results.txt
 ```
-## Disclaimer
-CloudRip is intended for research, educational purposes, and ethical testing only. Do not use this tool against websites without proper authorization. Misuse of this tool may be illegal and is solely the responsibility of the user.
+
+**Options:**
+- `<domain>` - The site you're testing (like example.com)
+- `-w <wordlist>` - Your own wordlist (defaults to dom.txt)
+- `-t <threads>` - How many threads to run (default is 10)
+- `-o <output_file>` - Save results to a file
+
+## Example
+```bash
+python3 cloudrip.py example.com -w custom_subs.txt -t 20 -o found_ips.txt
+```
+
+## Contributing
+
+Got ideas for improvements? Found a bug? Pull requests and issues are welcome! Whether it's better wordlists, new features, or bug fixes - all contributions help.
+
+## Important Legal Stuff
+
+**Only use CloudRip on systems you have permission to test.** This tool is for ethical security research, penetration testing with authorization, and educational purposes. Using it against websites without permission is illegal and not cool. You're responsible for how you use this tool.
+
+## License
+
+MIT License - use responsibly.
