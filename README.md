@@ -1,6 +1,6 @@
 # CloudRip
 
-A tool that helps you find the real IP addresses hiding behind Cloudflare by checking subdomains. Great for penetration testing, security research, and learning how Cloudflare protection works.
+A tool that helps you find the real IP addresses hiding behind Cloudflare by checking subdomains. For penetration testing, security research, and learning how Cloudflare protection works.
 
 ## What it does
 
