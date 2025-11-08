@@ -43,7 +43,7 @@ python3 cloudrip.py example.com -w custom_subs.txt -t 20 -o found_ips.txt
 
 ## Contributing
 
-Got ideas for improvements? Found a bug? Pull requests and issues are welcome! Whether it's better wordlists, new features, or bug fixes - all contributions help.
+Got ideas for improvements? Found a bug? Pull requests and issues are welcome! If it's better wordlists, new features, or bug fixes - all contributions help.
 
 ## Important Legal Stuff
 
