@@ -26,6 +26,10 @@ def banner():
     figlet_text = pyfiglet.Figlet(font="slant").renderText("CloudRip")
     print(BLUE + figlet_text)
     print(RED + "CloudFlare Bypasser - Find Real IP Addresses Behind Cloudflare")
+    print(YELLOW + "\"Ripping through the clouds to expose the truth\"")
+    print(WHITE + "by: " + GREEN + "Stax")
+    print(WHITE + "GitHub: " + BLUE + "https://github.com/staxsum/CloudRip")
+    print()
 
 def resolve_subdomain(subdomain, domain):
     """Attempts to resolve a subdomain."""
