@@ -41,6 +41,30 @@ python3 cloudrip.py example.com -w dom.txt -t 20 -o results.txt
 python3 cloudrip.py example.com -w custom_subs.txt -t 20 -o found_ips.txt
 ```
 
+## Version History
+
+### v2.0.0 (Current)
+- **Massive wordlist upgrade** - Took dom.txt from 100 to 600+ subdomains
+- Added API variants, cloud infrastructure, IoT endpoints
+- Covers auth/security, payment gateways, analytics, CI/CD pipelines
+- Way better geo coverage - cities and more countries
+- Handles modern cloud-native and microservices setups
+- Better database and service discovery hits
+
+### v1.5.0
+- Rate limiting so you don't get blocked
+- Thread handling works better now
+- Doesn't crash on DNS failures anymore
+- Prettier output with colors
+
+### v1.0.0
+- First drop with the core stuff
+- Multi-threaded subdomain scanning
+- Filters out Cloudflare IPs
+- Bring your own wordlist
+- Save results to file
+- Basic dom.txt with ~100 entries
+
 ## Contributing
 
 Got ideas for improvements? Found a bug? Pull requests and issues are welcome! If it's better wordlists, new features, or bug fixes - all contributions help.
